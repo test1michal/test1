@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Extensibility\src\PwC.SDK.Extensibility\PwC.SDK.Extensibility.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\src\PwC.SDK.Mvc\PwC.SDK.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Session\src\PwC.SDK.Session.Services.Abstractions\PwC.SDK.Session.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\src\PwC.SDK.Shared\PwC.SDK.Shared.csproj" />
+    <ProjectReference Include="..\..\..\StorageUpdater\PwC.SDK.StorageUpdater.Abstractions\PwC.SDK.StorageUpdater.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Services.Abstractions\PwC.SDK.Users.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Services\PwC.SDK.Users.Services.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Authentication.Model\PwC.SDK.Authentication.Model.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Authentication.Services.Abstractions\PwC.SDK.Authentication.Services.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="dacpac\PwC.SDK.Authentication.Database.dacpac" />
+  </ItemGroup>
+
+</Project>

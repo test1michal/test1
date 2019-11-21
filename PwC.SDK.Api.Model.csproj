@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>

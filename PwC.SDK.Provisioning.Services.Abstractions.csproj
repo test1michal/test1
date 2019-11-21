@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Api\src\PwC.SDK.Api.Model\PwC.SDK.Api.Model.csproj" />
+    <ProjectReference Include="..\..\..\Data\src\PwC.SDK.Data.EntityFrameworkCore\PwC.SDK.Data.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\HealthCheck\src\PwC.SDK.HealthCheck.Services.Abstractions\PwC.SDK.HealthCheck.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Model\PwC.SDK.Users.Model.csproj" />
+    <ProjectReference Include="..\..\..\Validation\src\PwC.SDK.Validation\PwC.SDK.Validation.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Provisioning.Model\PwC.SDK.Provisioning.Model.csproj" />
+  </ItemGroup>
+
+</Project>

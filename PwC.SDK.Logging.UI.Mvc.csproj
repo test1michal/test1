@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\images\error-page.png" />
+    <EmbeddedResource Include="Assets\js\dist\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Data\src\PwC.SDK.Data.EntityFrameworkCore\PwC.SDK.Data.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\Diagnostic\src\PwC.SDK.Diagnostic.UI.Services\PwC.SDK.Diagnostic.UI.Services.csproj" />
+    <ProjectReference Include="..\..\..\Extensibility\src\PwC.SDK.Extensibility\PwC.SDK.Extensibility.csproj" />
+    <ProjectReference Include="..\..\..\Admin\src\PwC.SDK.Admin.Model\PwC.SDK.Admin.Model.csproj" />
+    <ProjectReference Include="..\..\..\Admin\src\PwC.SDK.Admin.Services.Abstractions\PwC.SDK.Admin.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\src\PwC.SDK.Mvc\PwC.SDK.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Shell\src\PwC.SDK.Shell.MainMenu.Model\PwC.SDK.Shell.MainMenu.Model.csproj" />
+    <ProjectReference Include="..\..\..\TagHelper\src\PwC.SDK.Mvc.TagHelpers\PwC.SDK.Mvc.TagHelpers.csproj" />
+    <ProjectReference Include="..\..\..\ViewComponents\src\PwC.SDK.ViewComponents.Mvc\PwC.SDK.ViewComponents.Mvc.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Logging.Model\PwC.SDK.Logging.Model.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Logging.Services.Abstractions\PwC.SDK.Logging.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Logging.UI.Model\PwC.SDK.Logging.UI.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.2.0" />
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.9.406" />
+  </ItemGroup>
+
+  <Target Name="Bundle" AfterTargets="Restore" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+
+</Project>

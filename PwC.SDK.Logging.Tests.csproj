@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.7.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\src\PwC.SDK.Shared.UnitTests\PwC.SDK.Shared.UnitTests.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Logging.Model\PwC.SDK.Logging.Model.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Logging.Services.Abstractions\PwC.SDK.Logging.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Logging.Services\PwC.SDK.Logging.Services.csproj" />
+  </ItemGroup>
+
+</Project>

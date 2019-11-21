@@ -1,0 +1,67 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>PwC.SDK.Core.Documentation</AssemblyName>
+    <RootNamespace>PwC.SDK.Core.Documentation</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\api\**" />
+    <Compile Remove="wwwroot\articles\**" />
+    <Compile Remove="wwwroot\fonts\**" />
+    <Compile Remove="wwwroot\images\**" />
+    <Compile Remove="wwwroot\styles\**" />
+    <Content Remove="wwwroot\api\**" />
+    <Content Remove="wwwroot\articles\**" />
+    <Content Remove="wwwroot\fonts\**" />
+    <Content Remove="wwwroot\images\**" />
+    <Content Remove="wwwroot\styles\**" />
+    <EmbeddedResource Remove="wwwroot\api\**" />
+    <EmbeddedResource Remove="wwwroot\articles\**" />
+    <EmbeddedResource Remove="wwwroot\fonts\**" />
+    <EmbeddedResource Remove="wwwroot\images\**" />
+    <EmbeddedResource Remove="wwwroot\styles\**" />
+    <None Remove="wwwroot\api\**" />
+    <None Remove="wwwroot\articles\**" />
+    <None Remove="wwwroot\fonts\**" />
+    <None Remove="wwwroot\images\**" />
+    <None Remove="wwwroot\styles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="docfx.json" />
+    <Content Remove="wwwroot\favicon.ico" />
+    <Content Remove="wwwroot\index.html" />
+    <Content Remove="wwwroot\logo.svg" />
+    <Content Remove="wwwroot\manifest.json" />
+    <Content Remove="wwwroot\search-stopwords.json" />
+    <Content Remove="wwwroot\toc.html" />
+    <Content Remove="wwwroot\xrefmap.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="api\.gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="api\.gitignore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="docfx.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="docfx.console" Version="2.35.4" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.1.0" />
+  </ItemGroup>
+
+</Project>

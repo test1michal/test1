@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.6.0" />
+    <PackageReference Include="Kaltura" Version="3.3.3" />
+    <PackageReference Include="Moq" Version="4.10.1" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PwC.SDK.Kaltura.Model\PwC.SDK.Kaltura.Model.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Kaltura.Services.Abstractions\PwC.SDK.Kaltura.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Kaltura.Services\PwC.SDK.Kaltura.Services.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Kaltura.UI.Services\PwC.SDK.Kaltura.UI.Services.csproj" />
+  </ItemGroup>
+
+</Project>

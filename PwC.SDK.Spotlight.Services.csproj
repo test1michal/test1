@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Caching\src\PwC.SDK.Caching.Services.Abstractions\PwC.SDK.Caching.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\ConfigSettings\src\PwC.SDK.ConfigSettings.Services.Abstractions\PwC.SDK.ConfigSettings.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\ElementHistory\src\PwC.SDK.ElementHistory.Services.Abstraction\PwC.SDK.ElementHistory.Services.Abstraction.csproj" />
+    <ProjectReference Include="..\..\..\Data\src\PwC.SDK.Data.EntityFrameworkCore\PwC.SDK.Data.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\Extensibility\src\PwC.SDK.Extensibility\PwC.SDK.Extensibility.csproj" />
+    <ProjectReference Include="..\..\..\HealthCheck\src\PwC.SDK.HealthCheck.Services.Abstractions\PwC.SDK.HealthCheck.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Shared\src\PwC.SDK.Shared\PwC.SDK.Shared.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Spotlight.Model\PwC.SDK.Spotlight.Model.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Spotlight.Services.Abstractions\PwC.SDK.Spotlight.Services.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>

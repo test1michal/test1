@@ -1,0 +1,94 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+
+    <Product>.NET SDK</Product>
+
+    <Version>2.3.2</Version>
+
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.2.0" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <DotNetCliToolReference Include="dotnet-xunit" Version="2.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ApplicationIntegration\src\PwC.SDK.AppIntegration.Infrastructure.EF\PwC.SDK.AppIntegration.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\ApplicationIntegration\src\PwC.SDK.ApplicationIntegration.Services\PwC.SDK.AppIntegration.Services.csproj" />
+    <ProjectReference Include="..\Authorization\src\PwC.SDK.Authorization.Model\PwC.SDK.Authorization.Model.csproj" />
+    <ProjectReference Include="..\Caching\src\PwC.SDK.Caching.Services\PwC.SDK.Caching.Services.csproj" />
+    <ProjectReference Include="..\Data\src\PwC.SDK.Data.Abstractions\PwC.SDK.Data.Abstractions.csproj" />
+    <ProjectReference Include="..\LDAP\src\PwC.SDK.LDAP.Services.Abstractions\PwC.SDK.LDAP.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\LDAP\src\PwC.SDK.LDAP.Services\PwC.SDK.LDAP.Services.csproj" />
+    <ProjectReference Include="..\Localization\src\PwC.SDK.Localization.Services\PwC.SDK.Localization.Services.csproj" />
+    <ProjectReference Include="..\Logging\src\PwC.SDK.Logging.Infrastructure.EF\PwC.SDK.Logging.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Web.Mvc\PwC.SDK.Web.Mvc.csproj" />
+    <ProjectReference Include="..\Shared\src\PwC.SDK.Shared.UnitTests\PwC.SDK.Shared.UnitTests.csproj" />
+    <ProjectReference Include="..\Spotlight\src\PwC.SDK.Spotlight.Model\PwC.SDK.Spotlight.Model.csproj" />
+    <ProjectReference Include="..\UserActivity\src\PwC.SDK.UserActivity.Infrastructure.EF\PwC.SDK.UserActivity.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\Users\src\PwC.SDK.Users.Infrastructure.EF\PwC.SDK.Users.Infrastructure.EF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Tests\Data\ExtensionsTest\FeatureCategoryExtensionsTest\" />
+  </ItemGroup>
+
+ 
+
+</Project>

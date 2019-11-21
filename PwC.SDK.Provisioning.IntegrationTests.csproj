@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Api\src\PwC.SDK.Api.Model\PwC.SDK.Api.Model.csproj" />
+    <ProjectReference Include="..\..\..\Api\src\PwC.SDK.Api.Services\PwC.SDK.Api.Services.csproj" />
+    <ProjectReference Include="..\..\..\ApplicationIntegration\src\PwC.SDK.AppIntegration.Infrastructure.EF\PwC.SDK.AppIntegration.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Client\src\PwC.SDK.Clients.Infrastructure.EF\PwC.SDK.Clients.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Shared\src\PwC.SDK.Shared.UnitTests\PwC.SDK.Shared.UnitTests.csproj" />
+    <ProjectReference Include="..\..\..\Spotlight\src\PwC.SDK.Spotlight.Infrastructure.EF\PwC.SDK.Spotlight.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Infrastructure.EF\PwC.SDK.Users.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Provisioning.EC\PwC.SDK.Provisioning.EC.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Provisioning.Model\PwC.SDK.Provisioning.Model.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Provisioning.Services.Abstractions\PwC.SDK.Provisioning.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.Provisioning.Services\PwC.SDK.Provisioning.Services.csproj" />
+  </ItemGroup>
+
+</Project>

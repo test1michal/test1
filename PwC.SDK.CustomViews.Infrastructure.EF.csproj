@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Data\src\PwC.SDK.Data.EntityFrameworkCore\PwC.SDK.Data.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\Extensibility\src\PwC.SDK.Extensibility\PwC.SDK.Extensibility.csproj" />
+    <ProjectReference Include="..\..\..\StorageUpdater\PwC.SDK.StorageUpdater.Abstractions\PwC.SDK.StorageUpdater.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Model\PwC.SDK.Users.Model.csproj" />
+    <ProjectReference Include="..\PwC.SDK.CustomViews.Model\PwC.SDK.CustomViews.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="dacpac\PwC.SDK.CustomViews.Database.dacpac" />
+  </ItemGroup>
+
+</Project>

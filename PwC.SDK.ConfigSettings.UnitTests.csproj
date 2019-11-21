@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Data\src\PwC.SDK.Data.EntityFrameworkCore\PwC.SDK.Data.EntityFrameworkCore.csproj" />
+    <ProjectReference Include="..\..\..\PwC.SDK.Web.Mvc\PwC.SDK.Web.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Security\src\PwC.SDK.Security.Services.Abstractions\PwC.SDK.Security.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Security\src\PwC.SDK.Security.Services\PwC.SDK.Security.Services.csproj" />
+    <ProjectReference Include="..\..\..\Shared\src\PwC.SDK.Shared.UnitTests\PwC.SDK.Shared.UnitTests.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.ConfigSettings.Infrastructure.EF\PwC.SDK.ConfigSettings.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\src\PwC.SDK.ConfigSettings.Model\PwC.SDK.ConfigSettings.Model.csproj" />
+  </ItemGroup>
+
+</Project>

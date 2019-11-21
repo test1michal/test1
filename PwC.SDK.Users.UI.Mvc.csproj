@@ -1,0 +1,47 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Authors>PricewaterhouseCoopers LLP</Authors>
+    <Company>PricewaterhouseCoopers LLP</Company>
+    <Product>.NET SDK</Product>
+    <Description>PwC TT&amp;D Software Developement Kit Library</Description>
+    <Copyright>Copyright © PricewaterhouseCoopers LLP 2016</Copyright>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\dist\js\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="2.2.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+    <DotNetCliToolReference Include="BundlerMinifier.Core" Version="2.9.406" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Admin\src\PwC.SDK.Admin.Model\PwC.SDK.Admin.Model.csproj" />
+    <ProjectReference Include="..\..\..\Admin\src\PwC.SDK.Admin.Services.Abstractions\PwC.SDK.Admin.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\CustomViews\src\PwC.SDK.CustomViews.Model\PwC.SDK.CustomViews.Model.csproj" />
+    <ProjectReference Include="..\..\..\CustomViews\src\PwC.SDK.CustomViews.UI.Mvc\PwC.SDK.CustomViews.UI.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Extensibility\src\PwC.SDK.Extensibility\PwC.SDK.Extensibility.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\src\PwC.SDK.Mvc\PwC.SDK.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Shell\src\PwC.SDK.Shell.MainMenu.Model\PwC.SDK.Shell.MainMenu.Model.csproj" />
+    <ProjectReference Include="..\..\..\TagHelper\src\PwC.SDK.Mvc.TagHelpers\PwC.SDK.Mvc.TagHelpers.csproj" />
+    <ProjectReference Include="..\..\..\UserActivity\src\PwC.SDK.UserActivity.Model\PwC.SDK.UserActivity.Model.csproj" />
+    <ProjectReference Include="..\..\..\ViewComponents\src\PwC.SDK.ViewComponents.Mvc\PwC.SDK.ViewComponents.Mvc.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Users.Model\PwC.SDK.Users.Model.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Users.Services\PwC.SDK.Users.Services.csproj" />
+    <ProjectReference Include="..\PwC.SDK.Users.UI.Model\PwC.SDK.Users.UI.Model.csproj" />
+  </ItemGroup>
+
+  <Target Name="Bundle" AfterTargets="Restore" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet bundle" />
+  </Target>
+
+</Project>

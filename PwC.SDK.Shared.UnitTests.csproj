@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentAssertions" Version="5.7.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.2.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.2.6" />
+    <PackageReference Include="Microsoft.Extensions.Caching.SqlServer" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.2.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.12.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="Microsoft.CodeCoverage" Version="16.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ApplicationIntegration\src\PwC.SDK.AppIntegration.Infrastructure.EF\PwC.SDK.AppIntegration.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Authorization\src\PwC.SDK.Authorization.Infrastructure.EF\PwC.SDK.Authorization.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Authorization\src\PwC.SDK.Authorization.Services\PwC.SDK.Authorization.Services.csproj" />
+    <ProjectReference Include="..\..\..\Caching\src\PwC.SDK.Caching.Services.Abstractions\PwC.SDK.Caching.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Caching\src\PwC.SDK.Caching.Services\PwC.SDK.Caching.Services.csproj" />
+    <ProjectReference Include="..\..\..\Client\src\PwC.SDK.Clients.Infrastructure.EF\PwC.SDK.Clients.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Client\src\PwC.SDK.Clients.Model\PwC.SDK.Clients.Model.csproj" />
+    <ProjectReference Include="..\..\..\Client\src\PwC.SDK.Clients.Services\PwC.SDK.Clients.Services.csproj" />
+    <ProjectReference Include="..\..\..\ConfigSettings\src\PwC.SDK.ConfigSettings.Infrastructure.EF\PwC.SDK.ConfigSettings.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\ConfigSettings\src\PwC.SDK.ConfigSettings.Services\PwC.SDK.ConfigSettings.Services.csproj" />
+    <ProjectReference Include="..\..\..\CustomViews\src\PwC.SDK.CustomViews.Infrastructure.EF\PwC.SDK.CustomViews.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\CustomViews\src\PwC.SDK.CustomViews.Model\PwC.SDK.CustomViews.Model.csproj" />
+    <ProjectReference Include="..\..\..\CustomViews\src\PwC.SDK.CustomViews.Services\PwC.SDK.CustomViews.Services.csproj" />
+    <ProjectReference Include="..\..\..\ConfigSettings\src\PwC.SDK.ConfigSettings.Model\PwC.SDK.ConfigSettings.Model.csproj" />
+    <ProjectReference Include="..\..\..\ElementHistory\src\PwC.SDK.ElementHistory.Infrastructure.EF\PwC.SDK.ElementHistory.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\ElementHistory\src\PwC.SDK.ElementHistory.Services\PwC.SDK.ElementHistory.Services.csproj" />
+    <ProjectReference Include="..\..\..\Features\src\PwC.SDK.Features.Infrastructure.EF\PwC.SDK.Features.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Features\src\PwC.SDK.Features.Model\PwC.SDK.Features.Model.csproj" />
+    <ProjectReference Include="..\..\..\Feedback\src\PwC.SDK.Feedback.Infrastructure.EF\PwC.SDK.Feedback.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Localization\src\PwC.SDK.Localization.Infrastructure.EF\PwC.SDK.Localization.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Localization\src\PwC.SDK.Localization.Services\PwC.SDK.Localization.Services.csproj" />
+    <ProjectReference Include="..\..\..\Logging\src\PwC.SDK.Logging.Infrastructure.EF\PwC.SDK.Logging.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Logging\src\PwC.SDK.Logging.Model\PwC.SDK.Logging.Model.csproj" />
+    <ProjectReference Include="..\..\..\Logging\src\PwC.SDK.Logging.Services\PwC.SDK.Logging.Services.csproj" />
+    <ProjectReference Include="..\..\..\Profile\src\PwC.SDK.Profile.Infrastructure.EF\PwC.SDK.Profile.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Profile\src\PwC.SDK.Profile.Services\PwC.SDK.Profile.Services.csproj" />
+    <ProjectReference Include="..\..\..\Mvc\src\PwC.SDK.Mvc\PwC.SDK.Mvc.csproj" />
+    <ProjectReference Include="..\..\..\Security\src\PwC.SDK.Security.Infrastructure.EF\PwC.SDK.Security.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Security\src\PwC.SDK.Security.Services\PwC.SDK.Security.Services.csproj" />
+    <ProjectReference Include="..\..\..\SessionResume\src\PwC.SDK.SessionResume.Infrastructure.EF\PwC.SDK.SessionResume.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Session\src\PwC.SDK.Session.Model\PwC.SDK.Session.Model.csproj" />
+    <ProjectReference Include="..\..\..\Session\src\PwC.SDK.Session.Services.Abstractions\PwC.SDK.Session.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\..\Session\src\PwC.SDK.Session.Services\PwC.SDK.Session.Services.csproj" />
+    <ProjectReference Include="..\..\..\Shell\src\PwC.SDK.Shell.MainMenu.Infrastructure.EF\PwC.SDK.Shell.MainMenu.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Spotlight\src\PwC.SDK.Spotlight.Infrastructure.EF\PwC.SDK.Spotlight.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\UserActivity\src\PwC.SDK.UserActivity.Infrastructure.EF\PwC.SDK.UserActivity.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Infrastructure.EF\PwC.SDK.Users.Infrastructure.EF.csproj" />
+    <ProjectReference Include="..\..\..\Tour\src\PwC.SDK.Tour.Model\PwC.SDK.Tour.Model.csproj" />
+    <ProjectReference Include="..\..\..\Users\src\PwC.SDK.Users.Model\PwC.SDK.Users.Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resource1.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resource1.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+
+</Project>
